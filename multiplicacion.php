@@ -1,8 +1,6 @@
 <?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+   $num1 = $_GET['num1'];
+   $num2 = $_GET['num2'];
+   echo "<h1>Multiplicación</h1><h2>$num1 x $num2 = ".($num1 * $num2)."</h2>";
+   echo "<a href='index.php'><h3>Volver al inicio</h3></a>";
+?>

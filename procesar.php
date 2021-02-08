@@ -1,11 +1,22 @@
 <?php
-
-    echo "<h1>Tu nombre: ".$_POST['nombre']."</h1>";
-    echo "<h1>Tu edad: ".$_POST['edad']."</h1>";
-    echo "<hr>";
+    if(isset($_POST['accion'])){
+        $accion = $_POST['accion'];
+    }
     
-    foreach($_POST as $key => $value){
-        echo "<strong>$key:</strong> $value<br>";
+    if(isset($_POST['numero1'])){
+        $num1 = $_POST['numero1'];
+    }
+    
+    if(isset($_POST['numero2'])){
+        $num2 = $_POST['numero2'];
+    }
+    
+    if($accion !== null){
+        header("refresh: 0.1; $accion.php?num1=$num1&num2=$num2");
+    }
+    else{
+        echo "<h1>Algo ha salido mal...</h1>";
+        header("refresh: 1; index.php");
     }
 
 ?>
